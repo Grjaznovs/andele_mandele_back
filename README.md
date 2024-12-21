@@ -15,13 +15,6 @@ Docker Desktop 4.34.1
 - `php artisan serve`
 - `API ip to backend http://127.0.0.1:8000`
 
-[//]: # (- `docker-compose exec php php artisan migrate`)
-
-[//]: # (- `docker-compose exec php php artisan db:seed`)
-- `docker compose up -d`
-
-[//]: # (- `npm run dev`)
-
 ### Laravel App
 - URL: http://localhost
 

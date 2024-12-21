@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Classes\RickAndMortyApi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class RickAndMortyController extends Controller
 {
@@ -11,6 +13,8 @@ class RickAndMortyController extends Controller
      */
     public function index()
     {
+        $userData = (new RickAndMortyApi())->getRickAndMortyData();
+        Log::error($userData);
         return response()->json('test a aaa');
     }
 
