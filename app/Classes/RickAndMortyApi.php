@@ -25,7 +25,6 @@ class RickAndMortyApi
 
         /** @var Response $response */
         $response = Http::withoutVerifying()->withHeaders($headers)->{$method}($url);
-
         return (isset($response['error']) || empty($response) ? null : $response);
     }
 }

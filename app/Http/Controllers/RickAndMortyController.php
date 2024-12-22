@@ -15,7 +15,7 @@ class RickAndMortyController extends Controller
     public function index($page = 1)
     {
         $data = (new RickAndMortyApi())->getData('character', $page);
-        return RickAndMortyResource::collection($data['results']);
+        return RickAndMortyResource::collection((isset($data['results']) ? $data['results'] : []));
     }
 
     /**
