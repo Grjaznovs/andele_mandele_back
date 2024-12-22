@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Classes\RickAndMortyApi;
+use App\Http\Resources\RickAndMortyResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -11,11 +12,10 @@ class RickAndMortyController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($page = 1)
     {
-        $userData = (new RickAndMortyApi())->getRickAndMortyData();
-        Log::error($userData);
-        return response()->json('test a aaa');
+        $data = (new RickAndMortyApi())->getData('character', $page);
+        return RickAndMortyResource::collection($data['results']);
     }
 
     /**

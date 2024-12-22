@@ -5,5 +5,5 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('rickandmorty')->group(function () {
-    Route::get('/list', [RickAndMortyController::class, 'index']);
+    Route::get('/list/{page?}', [RickAndMortyController::class, 'index']);
 });
