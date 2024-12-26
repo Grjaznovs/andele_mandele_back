@@ -12,6 +12,7 @@ Docker Desktop 4.34.1
 - `chmod -R 777 /var/www/storage /var/www/bootstrap/cache`
 - `composer setup`
 - `exit`
+- `docker-compose exec php php artisan migrate`
 - `php artisan serve`
 - `API ip to backend http://127.0.0.1:8000`
 
