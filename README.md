@@ -1,7 +1,7 @@
 Docker Desktop 4.34.1
 
 ### For first time only !
-- `git clone https://github.com/Grjaznovs/andele_mandele_back.git`
+- `git clone https://github.com/Grjaznovs/goodday_back.git`
 - `cd andele_mande`
 - `docker compose up -d --build`
 - `composer update`
